@@ -65,7 +65,7 @@ const App = () => {
 
     const handleCreateRoom = async () => {
         try {
-            const response = await fetch("https://chat-mern-api.vercel.app/create-room", {
+            const response = await fetch("https://chat-mern-backend.onrender.com/create-room", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({}),
