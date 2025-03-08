@@ -18,7 +18,9 @@ const io = socketIo(server, {
     cors: { origin: "*", methods: ["GET", "POST"] }
 });
 
-app.use(cors());
+app.use(cors({ origin: "https://chat-mern-frontend-git-main-yash-lalanis-projects.vercel.app/",
+    credentials: true
+  }));
 app.use(express.json());
 
 
