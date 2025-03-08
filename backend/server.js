@@ -21,10 +21,12 @@ const io = socketIo(server, {
 
 
 const corsOptions = {
-    origin: "*",  // 🔥 Allow all origins (for testing only)
+    origin: "https://incandescent-concha-1c3c14.netlify.app", // Replace with your frontend URL
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // If your API requires cookies or auth headers, you might need to remove this
+    credentials: true,
 };
+app.use(cors(corsOptions));
+
 
 app.use(cors(corsOptions));
 
