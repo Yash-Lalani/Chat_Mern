@@ -18,29 +18,28 @@ const Signup = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault(); // Prevent page refresh
-
+    
         try {
-            if (
-                formData.username === "" ||
-                formData.email === "" ||
-                formData.password === ""
-            ) {
+            if (!formData.username || !formData.email || !formData.password) {
                 alert("All fields are required");
                 return;
             }
-
+    
             // Send data to server
             const response = await axios.post(
                 "https://chat-mern-backend.onrender.com/api/v1/sign-up",
-                formData
+                formData,
+                { headers: { "Content-Type": "application/json" } } // Ensure JSON format
             );
-
-            console.log(response.data);
+    
+            console.log("✅ Signup Success:", response.data);
             navigate("/");
         } catch (error) {
-            console.error("Error:", error);
+            console.error("❌ Signup Error:", error.response?.data || error.message);
+            alert(error.response?.data?.message || "Something went wrong");
         }
     };
+    
 
     return (
         <div className="signup-container">
