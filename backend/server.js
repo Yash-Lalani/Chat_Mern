@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const http = require("http");
 const socketIo = require("socket.io");
-const cors = require("cors");
+
 const mongoose = require("mongoose");
 const axios = require("axios");
 const { v4: uuidv4 } = require("uuid");
