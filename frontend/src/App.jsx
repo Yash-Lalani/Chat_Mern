@@ -12,7 +12,10 @@ import { useDispatch } from "react-redux";
 import { authActions } from "./store/auth";
 import "./App.css";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://chat-mern-api.vercel.app", {
+    transports: ["websocket"],
+});
+
 
 const App = () => {
     const dispatch = useDispatch();
@@ -62,7 +65,7 @@ const App = () => {
 
     const handleCreateRoom = async () => {
         try {
-            const response = await fetch("http://localhost:5000/create-room", {
+            const response = await fetch("https://chat-mern-api.vercel.app/create-room", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({}),

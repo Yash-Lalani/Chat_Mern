@@ -31,7 +31,7 @@ const Signup = () => {
 
             // Send data to server
             const response = await axios.post(
-                "http://localhost:5000/api/v1/sign-up",
+                "https://chat-mern-api.vercel.app/api/v1/sign-up",
                 formData
             );
 
