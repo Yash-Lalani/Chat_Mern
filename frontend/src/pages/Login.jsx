@@ -31,7 +31,7 @@ const Login = () => {
 
             // Send login request to server
             const response = await axios.post(
-                "https://chat-mern-api.vercel.app/api/v1/sign-in",
+                "https://chat-mern-backend.onrender.com/api/v1/sign-in",
                 formData
             );
 

@@ -12,7 +12,7 @@ import { useDispatch } from "react-redux";
 import { authActions } from "./store/auth";
 import "./App.css";
 
-const socket = io("https://chat-mern-api.vercel.app", {
+const socket = io("https://chat-mern-backend.onrender.com/", {
     transports: ["websocket"],
 });
 

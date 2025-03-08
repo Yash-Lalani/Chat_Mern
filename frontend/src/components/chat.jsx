@@ -112,7 +112,7 @@ const Chat = ({ socket, userInfo, usersInRoom, setUsersInRoom, setUserInfo }) =>
       formData.append("type", fileType);
   
       try {
-        const res = await axios.post("https://chat-mern-api.vercel.app/upload", formData, {
+        const res = await axios.post("https://chat-mern-backend.onrender.com/upload", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
   

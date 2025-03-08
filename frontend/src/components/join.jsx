@@ -12,7 +12,7 @@ const Join = ({ onJoin, onCreateRoom }) => {
     // ✅ Check if Room ID Exists in Database
     const validateRoomId = async () => {
         try {
-            const response = await fetch("https://chat-mern-api.vercel.app/check-room", {
+            const response = await fetch("https://chat-mern-backend.onrender.com/check-room", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ roomId }),
