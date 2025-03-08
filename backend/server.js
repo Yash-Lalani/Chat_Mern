@@ -18,13 +18,16 @@ const io = socketIo(server, {
     cors: { origin: "*", methods: ["GET", "POST"] }
 });
 
+const cors = require("cors");
+
 const corsOptions = {
-    origin: "https://chat-mern-frontend-git-main-yash-lalanis-projects.vercel.app", 
+    origin: "*",  // 🔥 Allow all origins (for testing only)
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  };
-  
-  app.use(cors(corsOptions));
+    credentials: true, // If your API requires cookies or auth headers, you might need to remove this
+};
+
+app.use(cors(corsOptions));
+
   
 app.use(express.json());
 
