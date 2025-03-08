@@ -18,7 +18,7 @@ const io = socketIo(server, {
     cors: { origin: "*", methods: ["GET", "POST"] }
 });
 
-const cors = require("cors");
+
 
 const corsOptions = {
     origin: "*",  // 🔥 Allow all origins (for testing only)
