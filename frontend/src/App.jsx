@@ -16,7 +16,6 @@ const socket = io("https://chat-mern-backend.onrender.com/", {
     transports: ["websocket"],
 });
 
-
 const App = () => {
     const dispatch = useDispatch();
 

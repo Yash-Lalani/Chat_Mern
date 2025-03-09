@@ -93,7 +93,7 @@ const Signup = () => {
                     Already have an account?{" "}
                     <button
                         className="btn btn-link p-0"
-                        onClick={() => navigate("/login")}
+                        onClick={() => navigate("/")}
                     >
                         Login
                     </button>

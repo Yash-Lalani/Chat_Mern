@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 const Join = ({ onJoin, onCreateRoom }) => {
     const [username, setUsername] = useState("");
     const [roomId, setRoomId] = useState("");
@@ -42,7 +43,7 @@ const Join = ({ onJoin, onCreateRoom }) => {
 
         const roomExists = await validateRoomId();
         if (roomExists) {
-            onJoin(username, roomId, language);
+           await onJoin(username, roomId, language);
             navigate("/chat"); // ✅ Redirect to Chat Page
         } else {
             alert("Invalid Room ID! Please enter a valid Room ID.");
